@@ -87,6 +87,23 @@ closeBtn.addEventListener('click' , ()=>{
 
 })
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    var searchButton = document.getElementById('no-refresh-btn');
+
+    searchButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default action (page refresh/submit)
+
+        // Get the search input value
+        var searchValue = document.querySelector('input[name="search"]').value;
+
+        // Perform your search logic here, for example, you can use AJAX to fetch search results
+        // Replace this with your actual search functionality
+        console.log('Search value:', searchValue);
+        // Add code here to handle the search (e.g., AJAX request or any other logic)
+    });
+});
+
 </script>
 
 </body>

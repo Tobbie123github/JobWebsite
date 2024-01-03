@@ -34,8 +34,8 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [JobController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 Route::get('/edit/{job}', [JobController::class, 'edit'])->name('edit')->middleware('auth');
 Route::put('/edit/{job}', [JobController::class, 'update'])->name('update')->middleware('auth');
-// Route::get('/jobpost/createjob' , [JobController::class, 'create'])->name('jobpost.create');
-// Route::post('/jobpost/createjob' , [JobController::class, 'store'])->name('jobpost.store');
+Route::get('/jobpost/createjob' , [JobController::class, 'create'])->name('jobpost.create');
+Route::post('/jobpost/createjob' , [JobController::class, 'store'])->name('jobpost.store');
 Route::delete('/delete/{job}', [JobController::class, 'destroy'])->name('delete')->middleware('auth');
 
 Route::resource('job', JobController::class)->middleware('auth');
